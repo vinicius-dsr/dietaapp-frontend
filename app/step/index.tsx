@@ -5,6 +5,7 @@ import { Image, Pressable, StyleSheet, Text, View, ScrollView } from "react-nati
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { router } from "expo-router";
 
 const schema = z.object({
 	name: z.string().min(1, { message: "Nome é obrigatório" }),
@@ -16,13 +17,21 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function Step() {
-
 	const {control, handleSubmit, formState: {errors, isValid}} = useForm<FormData>({
 		resolver: zodResolver(schema)
 	})
 
+
+	const handleCreate = (data: FormData) => {
+		console.log(data)
+
+		router.push("/create")
+	}
+
+
 	return (
 		<View style={styles.container}>
+
 			<Header title="Vamos começar" step="Passo 1" />
 
 			<ScrollView style={styles.content}>
@@ -50,7 +59,7 @@ export default function Step() {
 				</Text>
 				<Input control={control} name="age" placeholder="EX: 20" rules={{ required: true }} error={errors.name?.message} keyBoardTypes="numeric" />
 
-				<Pressable style={styles.button}>
+				<Pressable style={styles.button} onPress={handleSubmit(handleCreate)}>
 					<Text style={styles.buttonText}>
 						Avançar
 					</Text>
