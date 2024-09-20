@@ -1,6 +1,6 @@
+import { colors } from "@/constants/colors";
 import { Link } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import { colors } from "../constants/colors";
 
 export default function Index() {
 	return (
