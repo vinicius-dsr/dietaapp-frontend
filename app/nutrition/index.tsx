@@ -2,11 +2,18 @@ import { colors } from "@/constants/colors";
 import { api } from "@/services/api";
 import { useDataStore } from "@/store/data";
 import type { Data } from "@/types/data";
-import { Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import { useQuery } from "@tanstack/react-query";
 import { Link, router } from "expo-router";
 import React from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+	Pressable,
+	ScrollView,
+	Share,
+	StyleSheet,
+	Text,
+	View,
+} from "react-native";
 
 interface RespondeData {
 	data: Data;
@@ -41,6 +48,24 @@ export default function Nutrition() {
 		},
 	});
 
+	const handleShare = async () => {
+		try {
+			if (data && Object.keys(data).length === 0) return;
+
+			const suplementos = `${data?.suplementos.map((item) => `${item}`)}`;
+
+			const foods = `${data?.refeicoes.map((item) => `\n- Nome: ${item.nome}\n- Horário: ${item.horario}\n- Alimentos: ${item.alimentos.map((alimento) => `${alimento}`)}`)}`;
+
+			const message = `Dieta: ${data?.nome} \n- Objetivo: ${data?.objetivo} \n\nRefeições: ${foods} \n\n- Dicas de suplementos: ${suplementos}`;
+
+			await Share.share({
+				message: message,
+			});
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	if (isFetching) {
 		return (
 			<View style={styles.loading}>
@@ -66,7 +91,7 @@ export default function Nutrition() {
 			<View style={styles.ContainerHeader}>
 				<View style={styles.contentHeader}>
 					<Text style={styles.title}>Minha dieta</Text>
-					<Pressable style={styles.shareButton}>
+					<Pressable style={styles.shareButton} onPress={handleShare}>
 						<Text style={styles.shareButtonText}>Compartilhar</Text>
 						<Feather name="share-2" size={14} color="white" />
 					</Pressable>
