@@ -3,7 +3,8 @@ import Select from "@/components/input/select";
 import { colors } from "@/constants/colors";
 import { useDataStore } from "@/store/data";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { set, useForm } from "react-hook-form";
+import { router } from "expo-router";
+import { useForm } from "react-hook-form";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { z } from "zod";
 
@@ -98,7 +99,7 @@ export default function Create() {
 				/>
 
 				<Pressable style={styles.button} onPress={handleSubmit(handleCreate)}>
-					<Text style={styles.buttonText}>Avançar</Text>
+					<Text style={styles.buttonText}>Gerar dieta</Text>
 				</Pressable>
 			</ScrollView>
 		</View>
