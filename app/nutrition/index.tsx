@@ -1,4 +1,4 @@
-import { colors } from "@/constants/colors";
+import { colors } from "@/constants/Colors";
 import { api } from "@/services/api";
 import { useDataStore } from "@/store/data";
 import type { Data } from "@/types/data";
@@ -171,10 +171,9 @@ const styles = StyleSheet.create({
 	},
 	ContainerHeader: {
 		backgroundColor: colors.white,
-		borderBottomLeftRadius: 14,
-		borderBottomRightRadius: 14,
+		borderBottomRightRadius: 25,
 		paddingTop: 60,
-		paddingBottom: 20,
+		paddingBottom: 25,
 		marginBottom: 16,
 	},
 	contentHeader: {
@@ -195,7 +194,7 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 		justifyContent: "center",
 		alignItems: "center",
-		borderRadius: 8,
+		borderRadius: 20,
 	},
 	shareButtonText: {
 		color: colors.white,
@@ -260,10 +259,10 @@ const styles = StyleSheet.create({
 	button: {
 		backgroundColor: colors.blue,
 		width: "100%",
-		height: 50,
+		height: 54,
 		justifyContent: "center",
 		alignItems: "center",
-		borderRadius: 4,
+		borderRadius: 52,
 		marginTop: 14,
 		marginBottom: 24,
 	},

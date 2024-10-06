@@ -1,4 +1,4 @@
-import { colors } from "@/constants/colors";
+import { colors } from "@/constants/Colors";
 import React from "react";
 import { Controller } from "react-hook-form";
 import {
@@ -55,9 +55,10 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		backgroundColor: colors.white,
-		height: 50,
-		borderRadius: 4,
-		paddingHorizontal: 10,
+		height: 54,
+		borderRadius: 52,
+		paddingHorizontal: 16,
+		marginBottom: 8,
 	},
 	errorText: {
 		color: "red",

@@ -1,4 +1,4 @@
-import { colors } from "@/constants/colors";
+import { colors } from "@/constants/Colors";
 import { Feather } from "@expo/vector-icons";
 import { router } from "expo-router";
 import {
@@ -12,12 +12,11 @@ import {
 } from "react-native";
 
 interface HeaderProps {
-	step: string
+	step: string;
 	title: string;
 }
 
 export default function Header({ title, step }: HeaderProps) {
-
 	return (
 		<SafeAreaView style={styles.container}>
 			<View style={styles.content}>
@@ -33,25 +32,22 @@ export default function Header({ title, step }: HeaderProps) {
 				<Text style={styles.title}>{title}</Text>
 			</View>
 		</SafeAreaView>
-
-
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: colors.white,
-		borderBottomRightRadius: 14,
-		borderBottomLeftRadius: 14,
+		borderBottomRightRadius: 52,
 		marginBottom: 14,
+		// biome-ignore lint/style/noNonNullAssertion: <explanation>
 		paddingTop: Platform.OS === "android" ? StatusBar.currentHeight! + 34 : 34,
 	},
 	content: {
 		paddingLeft: 16,
 		paddingRight: 16,
 		paddingBottom: 34,
-		borderBottomRightRadius: 14,
-		borderBottomLeftRadius: 14,
+		borderBottomRightRadius: 52,
 	},
 	row: {
 		flexDirection: "row",

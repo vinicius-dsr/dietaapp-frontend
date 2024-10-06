@@ -1,4 +1,4 @@
-import { colors } from "@/constants/colors";
+import { colors } from "@/constants/Colors";
 import { Link } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
@@ -56,10 +56,10 @@ const styles = StyleSheet.create({
 	button: {
 		backgroundColor: colors.blue,
 		width: "100%",
-		height: 50,
+		height: 54,
 		justifyContent: "center",
 		alignItems: "center",
-		borderRadius: 4,
+		borderRadius: 52,
 		marginTop: 34,
 	},
 	buttonText: {

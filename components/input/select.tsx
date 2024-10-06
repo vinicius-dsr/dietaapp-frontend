@@ -1,4 +1,4 @@
-import { colors } from "@/constants/colors";
+import { colors } from "@/constants/Colors";
 import { Feather } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { Controller } from "react-hook-form";
@@ -97,8 +97,8 @@ const styles = StyleSheet.create({
 	},
 	input: {
 		backgroundColor: colors.white,
-		height: 50,
-		borderRadius: 4,
+		height: 54,
+		borderRadius: 52,
 		paddingHorizontal: 10,
 	},
 	errorText: {
@@ -110,9 +110,9 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 		justifyContent: "space-between",
 		backgroundColor: colors.white,
-		height: 50,
-		borderRadius: 4,
-		paddingHorizontal: 10,
+		height: 54,
+		borderRadius: 52,
+		paddingHorizontal: 16,
 	},
 	modalContainer: {
 		backgroundColor: "rgba(0,0,0,0.5)",
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
 	option: {
 		paddingVertical: 14,
 		backgroundColor: "rgba(208,208,208,0.40)",
-		borderRadius: 4,
-		paddingHorizontal: 8,
+		borderRadius: 50,
+		paddingHorizontal: 16,
 	},
 });

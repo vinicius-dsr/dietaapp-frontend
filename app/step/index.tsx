@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import Input from "@/components/input";
-import { colors } from "@/constants/colors";
+import { colors } from "@/constants/Colors";
 import { useDataStore } from "@/store/data";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { router } from "expo-router";
@@ -116,10 +116,10 @@ const styles = StyleSheet.create({
 	button: {
 		backgroundColor: colors.blue,
 		width: "100%",
-		height: 50,
+		height: 54,
 		justifyContent: "center",
 		alignItems: "center",
-		borderRadius: 4,
+		borderRadius: 52,
 		marginTop: 34,
 	},
 	buttonText: {
