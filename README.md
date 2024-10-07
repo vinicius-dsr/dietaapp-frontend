@@ -1,8 +1,9 @@
 # Aplicativo de Dieta Personalizada com IA
 
+
 ## Descrição do Projeto
 
-Este projeto é um aplicativo mobile desenvolvido em React Native usando Expo, que utiliza inteligência artificial para gerar dietas personalizadas para os usuários. O aplicativo se comunica com uma API que integra o Generative AI do Google para criar planos alimentares únicos e adaptados às necessidades individuais de cada pessoa.
+Este projeto é um aplicativo mobile desenvolvido em React Native usando Expo, que utiliza inteligência artificial para gerar dietas personalizadas para os usuários. O aplicativo se comunica com uma API, disponível em https://github.com/vinicius-dsr/dietaapp-backend, que integra o Generative AI do Google para criar planos alimentares únicos e adaptados às necessidades individuais de cada pessoa.
 
 ## Funcionalidades Principais
 
